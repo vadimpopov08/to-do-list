@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+
+body {}
+
+.to-do-list {
+    background-color: red;
+    padding: 24px;
+    display: flex;
+}
+
+.item {
+    margin: 5px 0px;
+}
+
+.input {
+    border-radius: 0;
+    border: none;
+    flex-grow: 1;
+}
+
+.btn {
+    border: none;
+    border-radius: 0;
+}
+
+.item button {
+    margin-left: 8px;
+}
