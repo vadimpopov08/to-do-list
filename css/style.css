@@ -2,29 +2,64 @@
     box-sizing: border-box;
 }
 
-body {}
+body {
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+ul>li {
+    list-style: none;
+}
 
 .to-do-list {
-    background-color: red;
-    padding: 24px;
+    background-color: #f44336;
     display: flex;
+    padding: 39.8px 23px 16.6px;
 }
 
 .item {
     margin: 5px 0px;
+    position: relative;
 }
 
 .input {
     border-radius: 0;
     border: none;
-    flex-grow: 1;
+    width: 100%;
 }
 
 .btn {
     border: none;
     border-radius: 0;
+    padding: 7px 47px;
 }
 
-.item button {
-    margin-left: 8px;
+.item:nth-child(even) {
+    background-color: #eeeeee;
+}
+
+.item {}
+
+.delete {
+    position: absolute;
+    right: 0;
+    border: none;
+    background: none;
+    font-family: 'Calibri';
+    font-size: 17px;
+}
+
+.check:checked {
+    background: url(../img/checkbox-selected-svgrepo-com.svg) no-repeat center/cover;
+    height: 9px;
+    width: 11px;
+}
+
+.item.task-complete {
+    text-decoration: line-through;
+    background-color: #888888;
 }
