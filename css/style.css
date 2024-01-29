@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+html,
+body {
+    height: 100%;
+}
+
 body {
     margin: 0;
 }
@@ -13,6 +18,13 @@ ul {
 
 ul>li {
     list-style: none;
+}
+
+.wrapper {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    height: 100%;
 }
 
 .to-do-list {
@@ -62,4 +74,37 @@ ul>li {
 .item.task-complete {
     text-decoration: line-through;
     background-color: #888888;
+}
+
+.modal {
+    display: block;
+    position: relative;
+    z-index: 10;
+    width: 422px;
+    height: 180px;
+    z-index: 20;
+    background-color: white;
+}
+
+.overlay::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(244, 67, 54, 0.376);
+    position: absolute;
+    z-index: 10;
+}
+
+.title {
+    font-family: 'Calibri';
+}
+
+.btns {
+    display: flex;
+    column-gap: 10px;
+    right: 20px;
+    bottom: 20px;
+    position: absolute;
 }
