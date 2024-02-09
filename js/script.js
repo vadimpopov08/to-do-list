@@ -3,9 +3,7 @@ const nameInput = document.getElementById('nameInput')
 const list = document.getElementById('list')
 const wrapper = document.querySelector('.wrapper')
 const overlayBefore = document.querySelector('.overlay::before')
-
-myButton.addEventListener('click', (eve) => {
-
+function addTask(event) {
     if (nameInput.value == 'Ксения') {
         let newBan = document.createElement('div')
         newBan.classList = ('ban')
@@ -71,5 +69,12 @@ myButton.addEventListener('click', (eve) => {
         })
 
         nameInput.value = '';
+    }
+}
+myButton.addEventListener('click', addTask)
+nameInput.addEventListener('keyup', (event) => {
+
+    if (event.key == 'Enter') {
+        addTask(event)
     }
 })
